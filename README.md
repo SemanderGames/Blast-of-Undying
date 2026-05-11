@@ -42,10 +42,10 @@ If you disable "Explode When Can't Reflect" and deflection overheats Artificer p
    After deflection: `counter = 5`
 
 2. `counter = 2`
-   After deflection: `counter = 7` → Artificer is stunned for x1 duration
+   After deflection: `counter = 7` -> Artificer is stunned for x1 duration
 
 3. `counter = 6`
-   After deflection: `counter = 9` → Artificer is stunned for x3 duration, but death is prevented
+   After deflection: `counter = 9` -> Artificer is stunned for x3 duration, but death is prevented
 
 4. `counter = 7`
    No deflection: the spear hits normally, as Artificer is stunned
