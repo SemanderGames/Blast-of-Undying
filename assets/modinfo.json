@@ -1,0 +1,11 @@
+{
+    "id": "semander.getparriednerd",
+    "name": "Get Parried NERD!",
+    "version": "0.1.2",
+    "authors": "Semander",
+    "description": "Gives Artificer 2 autoparries. The idea is to allow ambushing scavengers and avoid random off screen spear kills",
+    "requirements": [],
+    "requirements_names": [],
+    "tags": [],
+    "checksum_override_version": false
+}
