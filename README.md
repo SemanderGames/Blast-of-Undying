@@ -1,34 +1,49 @@
-# Rain World Mod Template
+# Blast of Undying — Artificer Spear Deflection
 
-This is a template for [BepInEx](https://github.com/BepInEx/BepInEx)-powered mods for [Rain World](https://store.steampowered.com/app/312520/Rain_World/).
+Makes Artificer automatically deflect incoming scavenger spears by consuming her normal Explosion Capacity.
 
-## How do I use this template?
+Tired of getting randomly sniped by an offscreen scavenger?
+Want to jump into a scavenger pack without instantly dying before you can even react?
 
-1. To get started, navigate to https://github.com/Pixelstormer/rain-world-mod-template and click the green '*Use this template*' button, then click '*Create a new repository*', or follow [these instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
-2. Choose a name for your mod, and change all instances of 'your name' & 'your mod name' as appropriate:
-    - `GetParriedNERD.csproj`
-        - Rename this file
-        - Change the `ModBuildFolder` property
-    - `GetParriedNERD.cs`
-        - Rename this file
-        - Rename the `GetParriedNERD` namespace
-        - Rename the `GetParriedNERDPlugin` class
-        - Change the `PLUGIN_GUID` value - this value is used for your mod's [GUID](https://rainworldmodding.miraheze.org/wiki/BepInPlugins#Step_2.3_-_Setting_up_the_mod's_information)
-        - Change the `PLUGIN_NAME` value - this value is used for your mod's display name
-    - `assets/modinfo.json`
-        - Change the `id` value - this should be the same as your mod's GUID
-        - Change the `name` value - this should be the same as your mod's display name
-        - Change the `authors` value - this should be your own name
-        - Change the `description` value
-    - `assets/thumbnail.png`
-        - Replace this with a suitable thumbnail for your mod
-3. Mod away!
+With this mod, if Artificer still has enough Explosion Capacity left, an incoming scavenger spear is deflected instead of killing her.
 
-### Running the mod
+The deflection uses the same explosion resource as Artificer’s normal explosive abilities, so it fits into her existing risk/reward gameplay instead of adding a separate shield meter.
 
-In order to run the mod, you need to follow a couple of simple steps:
-1. Compile the mod by running `dotnet build`. Once your mod has finished compiling, you will find it inside the `artifacts/bin/GetParriedNERD/debug_win-x86/mod` folder.
-2. Navigate to your Rain World installation, then copy or move the mod into the `RainWorld_Data/StreamingAssets/mods` folder.
-3. Launch the game, and enable your mod from the remix menu.
+Be careful, though:
+if your counter gets pushed too high, Artificer gets stunned and can no longer deflect more spears until she recovers.
+If she is already too overheated, the spear hits normally.
 
-Tip: Running `dotnet build` compiles your mod with the 'Debug' configuration, which generates extra debug information and disables optimisations. This can be helpful during development, but if your mod is having performance issues, or you want to share it with other people, you should compile it in the 'Release' configuration instead, by running `dotnet build -c Release`. Be aware that this will also move it to the `release_win-x86` folder.
+## Notes
+
+* Currently only affects scavenger spears
+* Other projectile support could be added later
+
+## Technical explanation
+
+Vanilla Artificer Explosion Capacity: `10`
+Default Deflection Cost: `4`
+Default Stun Threshold: `7`
+
+If a deflection pushes `pyroJumpCounter` to or past the stun threshold, Artificer is stunned, but the mod prevents that deflection itself from causing PyroDeath.
+
+### Examples
+
+1. `counter = 0`
+   After deflection: `counter = 4`
+
+2. `counter = 3`
+   After deflection: `counter = 7` → Artificer is stunned
+
+3. `counter = 6`
+   After deflection: `counter = 9` → Artificer is stunned
+
+4. `counter = 7`
+   No deflection: the spear hits normally
+
+## Feedback
+
+Bug reports and suggestions are very welcome.
+Please post them in the Workshop comments or on the GitHub issue tracker.
+
+Have fun causing havoc. >:}
+
