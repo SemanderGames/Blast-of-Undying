@@ -15,8 +15,8 @@ namespace GetParriedNERD
 	public class GetParriedNERDPlugin : BaseUnityPlugin
 	{
 		public const string PLUGIN_GUID = "semander.getparriednerd";
-		public const string PLUGIN_NAME = "Get Parried NERD!";
-		public const string PLUGIN_VERSION = "0.1.2";
+		public const string PLUGIN_NAME = "Blast of Undying";
+		public const string PLUGIN_VERSION = "1.0.0";
 
 		private bool init;
 

@@ -19,7 +19,7 @@ namespace GetParriedNERD
                     "If Artificer is too overheated to deflect, she explodes.",
                     null,
                     "",
-                    "Explode When Can't Reflect"
+                    "Explode When Can't Deflect"
                 )
             );
 
@@ -62,7 +62,7 @@ namespace GetParriedNERD
             Tabs = new OpTab[] { new OpTab(this, "Options") };
 
             Tabs[0].AddItems(
-                new OpLabel(new Vector2(20f, 560f), new Vector2(300f, 30f), "Get Parried NERD!", FLabelAlignment.Left, true),
+                new OpLabel(new Vector2(20f, 560f), new Vector2(300f, 30f), "Blast of Undying", FLabelAlignment.Left, true),
                 
                 new OpLabel(55f, 232f, "Arti explodes when she can't reflect a spear (Hard mode)"),
                 new OpCheckBox(ExplodeWhenCantReflect, new Vector2(20f, 230f)),
