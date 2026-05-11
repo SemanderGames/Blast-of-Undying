@@ -2,6 +2,8 @@
 
 Makes Artificer automatically deflect incoming scavenger spears by consuming half her normal Explosion Capacity.
 
+(My first mod)
+
 ![Artijak](/assets/thumbnail.png)
 
 Tired of getting randomly sniped by an offscreen scavenger?
