@@ -1,4 +1,4 @@
-# Blast of Undying — Artificer Spear Deflection
+# Blast of Undying (Artificer Spear Deflection)
 
 Makes Artificer automatically deflect incoming scavenger spears by consuming half her normal Explosion Capacity.
 
