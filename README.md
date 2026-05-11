@@ -17,7 +17,14 @@ If she is already overheated, she can EXPLODE! (Can be toggled off)
 * Currently only affects scavenger spears
 * Other projectile support could be added later
 
-> ## Technical explanation
+## Feedback
+
+Bug reports and suggestions are very welcome.
+Please post them in the Workshop comments or on the GitHub issue tracker.
+
+Have fun causing havoc. >:}
+
+## Technical overview
 
 * Vanilla Artificer Explosion Capacity: `10`
 * Default Deflection Cost: `5`
@@ -42,11 +49,3 @@ If you disable "Explode When Can't Reflect" and deflection overheats Artificer p
 
 4. `counter = 7`
    No deflection: the spear hits normally
-
-## Feedback
-
-Bug reports and suggestions are very welcome.
-Please post them in the Workshop comments or on the GitHub issue tracker.
-
-Have fun causing havoc. >:}
-
